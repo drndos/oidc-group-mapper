@@ -122,7 +122,7 @@ public class ClaimToGroupMapper extends AbstractClaimMapper {
         // check configurations
         String groupClaimName = mapperModel.getConfig().get(CLAIM);
         String containsText = mapperModel.getConfig().get(CONTAINS_TEXT);
-        Boolean createGroups = Boolean.valueOf(mapperModel.getConfig().get(CREATE_GROUPS));
+        boolean createGroups = Boolean.parseBoolean(mapperModel.getConfig().get(CREATE_GROUPS));
 
         // do nothing if no claim was adjusted
         if (isEmpty(groupClaimName))
